@@ -1,0 +1,3 @@
+/mnt/c/degenian/cplusplus/sources/test_files/cmake_tests/test1/CMakeFiles/rebuild_cache.dir
+/mnt/c/degenian/cplusplus/sources/test_files/cmake_tests/test1/CMakeFiles/test.dir
+/mnt/c/degenian/cplusplus/sources/test_files/cmake_tests/test1/CMakeFiles/edit_cache.dir
