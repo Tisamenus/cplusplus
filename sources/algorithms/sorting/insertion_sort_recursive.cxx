@@ -2,6 +2,13 @@
 
 using namespace std;
 
+template <class T> void printArray(int size, T* array) {
+  for(int i = 0; i < size; i++) {
+    cout << array[i] << " ";
+  }
+  cout << endl;
+}
+
 void swap(int& val1, int& val2) {
   val1 += val2;
   val2 = val1 - val2;
@@ -32,11 +39,7 @@ int main() {
     cin >> inputs[i];
   }
 
-  sortArray(size, inputs);
+  sortArray(size-1, inputs);
 
-  for(int i = 0; inputs[i]; i++) {
-    cout << inputs[i] << " ";
-  }
-
-  cout << endl;
+  printArray(size, inputs);
 }
