@@ -16,21 +16,30 @@ void swap(int& val1, int& val2) {
   val1 = val1 - val2;
 }
 
-void merge_sort(int q, int p, int ri, int r, int* numbers) {
+void merge_sort(int q, int p, int r, int* numbers, int* help_array) {
   int offset = q + p;
+  int ri = offset + (r-q)/2 + 1;
+
   if (ri > r) {
-    return;
+    if((r-q + 1)%2) {
+      int lpos = (r-q)/2 + q;
+      if(numbers[q+ 2*p - 1] > help_array[lpos]) {
+	swap(numbers[q+ 2*p - 1], help_array[lpos]);
+      }
+      numbers[q + 2*p] = help_array[lpos];
+      return;
+    }
   }
 
-  if (numbers[offset] > numbers[ri]) {
-    swap(numbers[offset], numbers[ri]);
-  }
-  if (offset + 1 == ri) {
-    ri++;
-    p = 0;
+  if (help_array[offset] > help_array[ri]) {
+    numbers[offset+p] = help_array[ri];
+    numbers[offset+1+p] = help_array[offset];
+  } else {
+    numbers[offset+p] = help_array[offset];
+    numbers[offset+1+p] = help_array[ri];
   }
 
-  merge_sort(q, p + 1, ri, r, numbers);
+  merge_sort(q, p + 1, r, numbers, help_array);
 }
 
 void merge_sort(int q, int r, int* numbers) {
@@ -39,7 +48,7 @@ void merge_sort(int q, int r, int* numbers) {
   }
   merge_sort(q, q + (r - q) / 2, numbers);
   merge_sort(q + (r - q) / 2 + 1, r, numbers);
-  merge_sort(q, 0, q + (r - q) / 2 + 1, r, numbers);
+  merge_sort(q, 0, r, numbers, numbers);
 }
 
 int main() {
