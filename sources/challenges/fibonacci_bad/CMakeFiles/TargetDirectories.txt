@@ -1,0 +1,4 @@
+/mnt/c/degenian/cplusplus/sources/challenges/fibonacci_bad/CMakeFiles/edit_cache.dir
+/mnt/c/degenian/cplusplus/sources/challenges/fibonacci_bad/CMakeFiles/fib.dir
+/mnt/c/degenian/cplusplus/sources/challenges/fibonacci_bad/CMakeFiles/rebuild_cache.dir
+/mnt/c/degenian/cplusplus/sources/challenges/fibonacci_bad/CMakeFiles/fibonacci.dir

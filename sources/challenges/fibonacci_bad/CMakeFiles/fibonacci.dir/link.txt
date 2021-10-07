@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/fibonacci.dir/fibonacci.cxx.o -o fibonacci  libfib.a 

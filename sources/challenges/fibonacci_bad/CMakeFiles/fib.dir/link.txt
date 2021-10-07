@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfib.a CMakeFiles/fib.dir/fib_bad.cxx.o
+/usr/bin/ranlib libfib.a
